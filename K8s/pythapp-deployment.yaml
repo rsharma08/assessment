@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: pythapp-deployment
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            component: web
+    template:
+        metadata:
+            labels:
+                component: web
+        spec:
+            containers:
+                - name: hello-world
+                  image: rsharma/pythapp
+                  ports:
+                    - containerPort: 5000
+        
+    

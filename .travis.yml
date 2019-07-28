@@ -1,0 +1,14 @@
+sudo: required
+services:
+    - docker
+    
+env:
+    global:
+        - SHA=$(git rev-parse HEAD)
+        
+deploy:
+    provider: scripts
+    script: bash ./deploy.sh
+    on:
+        branch: master
+    
