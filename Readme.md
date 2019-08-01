@@ -23,7 +23,7 @@ Follow instruction:-
 2. Once configured code copied. Run command from project root folder.
 
    Run:  kubectl apply -f k8s
-
+3. To access Hello world app please hit minikube IP address. Ip address available via command  'minkube ip'
 
 ## Configuration discussed:
 
