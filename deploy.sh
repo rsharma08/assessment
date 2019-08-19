@@ -6,3 +6,5 @@ docker push rsharma/pythapp:latest
 docker push rsharma/pythapp:$SHA
 
 
+kubectl apply -f k8s
+kubectl set image deployments/pythapp-deployment server=rsharma/pythapp:$SHA
